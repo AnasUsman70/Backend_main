@@ -1,6 +1,6 @@
 import express, { response } from 'express'
 import { data } from './data.js'
-import { Comments }  from './comments.js'
+// import { Comments }  from './comments.js'
 import mongoose from 'mongoose';
 import PostModel from './models/PostSchema.js';
 import UserModel from './models/UserSchema.js';
@@ -147,29 +147,29 @@ app.post('/login' ,async(req, res)=>{
 
 // Api for Data base 
 
-app.post('/createPost', async(req, res)=>{
+// app.post('/createPost', async(req, res)=>{
     
-    const {title, desc, postID} = req.body
+//     const {title, desc, postID} = req.body
     
-    if(!title || !desc || !postID){
-        res.json({
-            message: "required filled missing",
-            status: true
-        })
-        return;
-    }
+//     if(!title || !desc || !postID){
+//         res.json({
+//             message: "required filled missing",
+//             status: true
+//         })
+//         return;
+//     }
     
-    const postObj = {
-        title, desc, postID
-    }
+//     const postObj = {
+//         title, desc, postID
+//     }
     
-    const response = await PostModel.create(postObj)
+//     const response = await PostModel.create(postObj)
     
-    res.json({
-        message: "Data create Successfully",
-        // data: response
-    })
-})
+//     res.json({
+//         message: "Data create Successfully",
+//         // data: response
+//     })
+// })
 
 
 // for update data to database
@@ -198,14 +198,14 @@ app.delete('/deletePost/:id', async(req, res)=>{
 
 //for get data from data base
 
-app.get('/getPost', async(req, res) => {
-    const getData = await PostModel.find({})
-    res.json({ 
-        message: "Data get Successfully",
-        data: getData
-    })
-    res.send('get Post')
-})
+// app.get('/getPost', async(req, res) => {
+//     const getData = await PostModel.find({})
+//     res.json({ 
+//         message: "Data get Successfully",
+//         data: getData
+//     })
+//     res.send('get Post')
+// })
 
 
 // Api for practice
