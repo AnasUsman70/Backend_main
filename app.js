@@ -210,6 +210,6 @@ app.delete('/deletePost/:id', async(req, res)=>{
 
 // Api for practice
 
-app.get('/Comments', (request, response) =>{
-    response.send(Comments)
-})
+// app.get('/Comments', (request, response) =>{
+//     response.send(Comments)
+// })
